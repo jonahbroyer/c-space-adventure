@@ -3,9 +3,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, char** argv) {
+void printgreeting() {
     printf("Welcome to the Solar System!\n");
     printf("There are 9 planets to explore.\n");
+}
+
+int main(int argc, char** argv) {
+    printgreeting();
     printf("What is your name?\n");
     char name[32];
     fgets(name, 32, stdin);
