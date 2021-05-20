@@ -22,9 +22,10 @@ void printRandomPlanet() {
     printf("Arrived at Pluto, it's very cold here.\n");
 }
 
-// void printChosenPlanet() {
-//     printf("Name the planet you would like to visit.");
-// }
+void printChosenPlanet() {
+    printf("Traveling to Jupiter...\n");
+    printf("Arrived at Jupiter. A gas giant, with a noticeable red spot.\n");
+}
 
 int main(int argc, char** argv) {
     printWelcome();
@@ -43,8 +44,7 @@ int main(int argc, char** argv) {
             char choosePlanet[32];
             fgets(choosePlanet, 32, stdin);
             choosePlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
-            printf("Traveling to Jupiter...\n");
-            printf("Arrived at Jupiter. A gas giant, with a noticeable red spot.\n");
+            printChosenPlanet();
             break;
         }
         else {
