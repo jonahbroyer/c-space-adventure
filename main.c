@@ -48,6 +48,10 @@ int main(int argc, char** argv) {
             printf("Name the planet you would like to visit.\n");
             break;
         }
+        else {
+            printf("Sorry, I didn't get that.\n");
+            continue;
+        }
     }
 
     return 0;
