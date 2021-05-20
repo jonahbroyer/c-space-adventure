@@ -14,21 +14,41 @@ void printGreeting() {
     fgets(name, 32, stdin);
     name[strcspn(name, "\n")] = 0;
     printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", name);
+    printf("Let's go on an adventure!\n");
 }
 
-void printRandomPlanet() {
-    char chooseRandomPlanet[2];
-    fgets(chooseRandomPlanet, 32, stdin);
-    chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
-    printf("Choice is %s\n", chooseRandomPlanet);
-    printf("Traveling to Pluto...\n");
-    printf("Arrived at Pluto, it's very cold here.\n");
-}
+// void printRandomPlanet() {
+//     char chooseRandomPlanet[2];
+//     fgets(chooseRandomPlanet, 32, stdin);
+//     chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
+//     printf("Choice is %s\n", chooseRandomPlanet);
+//     printf("Traveling to Pluto...\n");
+//     printf("Arrived at Pluto, it's very cold here.\n");
+// }
+
+// void printChosenPlanet() {
+//     printf("Name the planet you would like to visit.");
+// }
 
 int main(int argc, char** argv) {
     printWelcome();
     printGreeting();
-    printf("Let's go on an adventure!\n");
-    printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
-    printRandomPlanet();
+    while (1) {
+        printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
+        char chooseRandomPlanet[2];
+        fgets(chooseRandomPlanet, 32, stdin);
+        chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
+        if (!strcmp(chooseRandomPlanet, "Y")) {
+            printf("Choice is %s\n", chooseRandomPlanet);
+            printf("Traveling to Pluto...\n");
+            printf("Arrived at Pluto, it's very cold here.\n");
+            break;
+        }
+        if (!strcmp(chooseRandomPlanet, "N")) {
+            printf("Name the planet you would like to visit.\n");
+            break;
+        }
+    }
+
+    return 0;
 }
