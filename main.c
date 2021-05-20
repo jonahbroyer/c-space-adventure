@@ -13,9 +13,10 @@ int main(int argc, char** argv) {
     printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", name);
     printf("Let's go on an adventure!\n");
     printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
-    char randomPlanet[2];
-    fgets(randomPlanet, 32, stdin);
+    char chooseRandomPlanet[2];
+    fgets(chooseRandomPlanet, 32, stdin);
+    chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
+    printf("Choice is %s\n", chooseRandomPlanet);
     printf("Traveling to Pluto...\n");
     printf("Arrived at Pluto, it's very cold here.\n");
 }
-
