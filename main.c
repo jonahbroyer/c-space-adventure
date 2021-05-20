@@ -39,13 +39,17 @@ int main(int argc, char** argv) {
         fgets(chooseRandomPlanet, 32, stdin);
         chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
         if (!strcmp(chooseRandomPlanet, "Y")) {
-            printf("Choice is %s\n", chooseRandomPlanet);
             printf("Traveling to Pluto...\n");
             printf("Arrived at Pluto, it's very cold here.\n");
             break;
         }
         if (!strcmp(chooseRandomPlanet, "N")) {
             printf("Name the planet you would like to visit.\n");
+            char choosePlanet[32];
+            fgets(choosePlanet, 32, stdin);
+            choosePlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
+            printf("Traveling to Jupiter...\n");
+            printf("Arrived at Jupiter. A gas giant, with a noticeable red spot.\n");
             break;
         }
         else {
