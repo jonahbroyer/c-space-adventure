@@ -16,15 +16,19 @@ void printGreeting() {
     printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", name);
 }
 
-int main(int argc, char** argv) {
-    printWelcome();
-    printGreeting();
-    printf("Let's go on an adventure!\n");
-    printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
+void printRandomPlanet() {
     char chooseRandomPlanet[2];
     fgets(chooseRandomPlanet, 32, stdin);
     chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
     printf("Choice is %s\n", chooseRandomPlanet);
     printf("Traveling to Pluto...\n");
     printf("Arrived at Pluto, it's very cold here.\n");
+}
+
+int main(int argc, char** argv) {
+    printWelcome();
+    printGreeting();
+    printf("Let's go on an adventure!\n");
+    printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
+    printRandomPlanet();
 }
