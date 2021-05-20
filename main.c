@@ -17,14 +17,10 @@ void printGreeting() {
     printf("Let's go on an adventure!\n");
 }
 
-// void printRandomPlanet() {
-//     char chooseRandomPlanet[2];
-//     fgets(chooseRandomPlanet, 32, stdin);
-//     chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
-//     printf("Choice is %s\n", chooseRandomPlanet);
-//     printf("Traveling to Pluto...\n");
-//     printf("Arrived at Pluto, it's very cold here.\n");
-// }
+void printRandomPlanet() {
+    printf("Traveling to Pluto...\n");
+    printf("Arrived at Pluto, it's very cold here.\n");
+}
 
 // void printChosenPlanet() {
 //     printf("Name the planet you would like to visit.");
@@ -39,8 +35,7 @@ int main(int argc, char** argv) {
         fgets(chooseRandomPlanet, 32, stdin);
         chooseRandomPlanet[strcspn(chooseRandomPlanet, "\n")] = 0;
         if (!strcmp(chooseRandomPlanet, "Y")) {
-            printf("Traveling to Pluto...\n");
-            printf("Arrived at Pluto, it's very cold here.\n");
+            printRandomPlanet();
             break;
         }
         if (!strcmp(chooseRandomPlanet, "N")) {
