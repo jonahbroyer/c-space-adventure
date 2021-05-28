@@ -1,14 +1,16 @@
 // data about the planets in the solar system
 #include <stdio.h>
 
-typedef struct solar_system {
-    char *mercury;
-    char *venus;
-    char *earth;
-    char *mars;
-    char *jupiter;
-    char *saturn;
-    char *uranus;
-    char *neptune;
-    char *pluto;
+# define LEN 100
+
+struct Planets {
+    char mercury[LEN];
+    char venus[LEN];
+    char earth[LEN];
+    char mars[LEN];
+    char jupiter[LEN];
+    char saturn[LEN];
+    char uranus[LEN];
+    char neptune[LEN];
+    char pluto[LEN];
 };

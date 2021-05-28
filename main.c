@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "functions.h"
+#include "planets.h"
 
 void printWelcome();
 void printGreeting();
@@ -10,6 +11,7 @@ void printRandomPlanet();
 void printChosenPlanet();
 
 int main(int argc, char** argv) {
+    struct Planets planet;
     printWelcome();
     printGreeting();
     while (1) {
