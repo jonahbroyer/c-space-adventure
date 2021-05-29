@@ -9,13 +9,35 @@
 
 #define PLANETS 9
 
+planet arr_planets[PLANETS];
+
 void printWelcome();
 void printGreeting();
 void printRandomPlanet();
 void printChosenPlanet();
 
+int randomPlanet() {
+    time_t t;
+    int random_num;
+    srand((unsigned) time(&t));
+    random_num = rand() % PLANETS;
+    return random_num;
+}
+
 int main(int argc, char** argv) {
-    struct Planets planet;
+    FILE *fp;
+
+    char *fPath = "./planetarySystem.txt";
+
+    fp = fopen(fPath, "r");
+
+    if (fp == NULL) {
+        fprintf(stderr, "Error number: %d\n", errno);
+        perror("Error");
+        printf("Error opening: \'%s'.\n", fPath);
+        exit(1);
+    }
+
     printWelcome();
     printGreeting();
     while (1) {
