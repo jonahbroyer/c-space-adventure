@@ -7,6 +7,8 @@
 #include "functions.h"
 #include "planets.h"
 
+#define PLANETS 9
+
 void printWelcome();
 void printGreeting();
 void printRandomPlanet();
