@@ -2,6 +2,8 @@
 // Author: Jonah Broyer
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
+#include <stdlib.h>
 #include "functions.h"
 #include "planets.h"
 
