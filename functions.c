@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "functions.h"
+#include "planets.h"
 
 void printWelcome() {
     printf("Welcome to the Solar System!\n");
