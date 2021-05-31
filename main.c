@@ -12,11 +12,6 @@
 
 planet arr_planets[PLANETS];
 
-void printWelcome();
-void printGreeting();
-void printRandomPlanet();
-void printChosenPlanet();
-
 int randomPlanet() {
     time_t t;
     int random_num;
