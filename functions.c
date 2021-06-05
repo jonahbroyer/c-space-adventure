@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #include <json-c/json.h>
 #include "functions.h"
 
@@ -36,7 +37,6 @@ char printRandomPlanet(void) {
     char choice;
     printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
     scanf(" %c", &choice);
-    printf("Inputted Value: %c\n", choice);
     return choice;
 }
 
@@ -48,12 +48,12 @@ void printChosenPlanet(char choice) {
     else if('N' == choice) {
         printf("Name the planet you would like to visit.\n");
         scanf(" %[^\n]s", planet);
-        
+            
         printf("Traveling to %s...\n", planet);
         printf("Arrived at %s.\n", planet);
     }
     else {
-        printf("I didn't understand what you said...\n");
+        printf("Sorry, I didn't get that.\n");
     }
 }
 
@@ -77,7 +77,7 @@ void parseJson() {
     if (fp == NULL) {
         fprintf(stderr, "Error number: %d\n", errno);
         perror("Error");
-        printf("Error opening: \'%s'.\n", fPath);
+        printf("Error opening: \'%s'.\n", FILE_NAME);
         exit(1);
     }
 
