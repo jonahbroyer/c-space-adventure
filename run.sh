@@ -1,2 +1,2 @@
-gcc -Wall -g main.c functions.c -o main
+gcc -Wall -g main.c functions.c -ljson-c -o main
 ./main
